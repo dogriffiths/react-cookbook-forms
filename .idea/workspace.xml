@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1aad428c-6b7d-4a77-9a71-7fd4b9f6e9b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stories/Introduction.stories.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stories/assets/code-brackets.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stories/assets/colors.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stories/assets/comments.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stories/assets/direction.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stories/assets/flow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stories/assets/plugin.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stories/assets/repo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stories/assets/stackalt.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/useDeepCompare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/useDeepCompare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/useDeepCompare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/useDeepEffect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +51,7 @@
       <recent name="$PROJECT_DIR$/src/stories" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Playform.should be able to show fields">
+  <component name="RunManager" selected="Jest.PlayForm">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -89,6 +81,19 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="PlayForm" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/PlayForm.test.js" />
+      <test-names>
+        <test-name value="PlayForm" />
+      </test-names>
+      <method v="2" />
     </configuration>
     <configuration name="Playform" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
@@ -152,6 +157,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.PlayForm" />
         <item itemvalue="Jest.Playform.should be able to show fields" />
         <item itemvalue="Jest.Playform" />
         <item itemvalue="Mocha.Playform" />
@@ -166,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608623976868</updated>
-      <workItem from="1608623986954" duration="8196000" />
+      <workItem from="1608623986954" duration="8549000" />
     </task>
     <servers />
   </component>

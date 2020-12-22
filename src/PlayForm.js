@@ -1,7 +1,7 @@
 import './PlayForm.css'
 import {useCallback, useEffect, useState} from 'react'
 import FormContext from './FormContext'
-import useDeepCompare from './useDeepCompare'
+import useDeepEffect from './useDeepEffect'
 
 function updateWith(oldValue, field, value) {
     const newValue = {...oldValue}
@@ -14,7 +14,7 @@ export default (props) => {
     const [errors, setErrors] = useState({})
     const [dirtyFields, setDirtyFields] = useState({})
 
-    useDeepCompare(() => {
+    useDeepEffect(() => {
         if (props.value) {
             setValues(props.value || {})
         }
