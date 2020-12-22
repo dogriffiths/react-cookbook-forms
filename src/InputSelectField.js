@@ -1,5 +1,6 @@
 import {useContext} from 'react'
 import FieldContext from './FieldContext'
+import './InputSelectField.css'
 
 export default (props) => {
     const field = useContext(FieldContext)
@@ -21,11 +22,8 @@ export default (props) => {
         >
             {props.children}
         </select>
-        {
-            field.error &&
-            <div className='InputSelectField-error'>
-                {field.error}
-            </div>
-        }
+        <div className='InputSelectField-error'>
+            {field.error || <>&nbsp;</>}
+        </div>
     </div>
 }

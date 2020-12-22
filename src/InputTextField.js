@@ -1,5 +1,6 @@
 import {useContext} from 'react'
 import FieldContext from './FieldContext'
+import './InputTextField.css'
 
 export default ({type}) => {
     const field = useContext(FieldContext)
@@ -20,7 +21,7 @@ export default ({type}) => {
                 }}
                 type={type}
             />
-            {field.error && <div className='InputTextField-error'>{field.error}</div>}
+            <div className='InputTextField-error'>{field.error || <> &nbsp;</>}</div>
         </div>
     )
 }

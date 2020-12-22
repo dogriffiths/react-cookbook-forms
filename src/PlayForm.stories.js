@@ -94,7 +94,7 @@ export const WithExternalError = () => {
     )
 }
 
-export const WithMaterialFields = () => {
+export const WithMultipleFields = () => {
     const [value, setValue] = useState({})
 
     return (
@@ -105,13 +105,13 @@ export const WithMaterialFields = () => {
                 </PlayField>
                 <PlayField
                     name='middleName'
-                    onValidate={(v) => (v.length < 5 ? 'Too short!' : null)}
+                    onValidate={(v) => (v.length < 4 ? 'Too short!' : null)}
                 >
                     <InputTextField/>
                 </PlayField>
                 <PlayField
                     name='lastName'
-                    onValidate={(v) => (v.length < 5 ? 'Too short!' : null)}
+                    onValidate={(v) => (v.length < 4 ? 'Too short!' : null)}
                 >
                     <InputTextField/>
                 </PlayField>
