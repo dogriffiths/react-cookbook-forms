@@ -1,0 +1,12 @@
+.PlayFieldGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    .PlayFieldGroup {
+        display: block;
+    }
+}
