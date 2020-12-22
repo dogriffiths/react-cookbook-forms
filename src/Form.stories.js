@@ -62,7 +62,12 @@ export const WithValidation = () => {
                     <option value='chocolate'>Chocolate</option>
                 </Select>
             </Field>
-            <button disabled={!valid} onClick={() => setMessage('Form submitted')}>
+            <button
+                disabled={!valid}
+                onClick={event => {
+                    event.preventDefault()
+                    setMessage('Form submitted');
+                }}>
                 Submit
             </button>
             {message}
@@ -87,7 +92,10 @@ export const WithExternalError = () => {
             <Field name='lastName'>
                 <Text/>
             </Field>
-            <button onClick={() => setError('Something went wrong!')}>
+            <button onClick={event => {
+                event.preventDefault()
+                setError('Something went wrong!');
+            }}>
                 Create external error
             </button>
         </Form>
