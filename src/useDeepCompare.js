@@ -1,5 +1,5 @@
 import {useEffect, useRef} from 'react'
-import isEqual from 'lodash/isequal'
+import isEqual from 'lodash/isEqual'
 
 function useDepsVersion(deps) {
     const cache = useRef()
