@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aad428c-6b7d-4a77-9a71-7fd4b9f6e9b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/InputSelectField.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InputTextField.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputSelectField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputSelectField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputTextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlayForm.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayForm.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FieldStyleContext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InputSelectField.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InputSelectField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InputTextField.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Text.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InputTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Field.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayFieldGroup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/FieldGroup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayFieldGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FieldGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayForm.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form.stories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayForm.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/render.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/render.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +34,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1m0IEo9VD6rpceYgRn57ZRlAfUI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,6 +59,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -57,7 +70,7 @@
       <recent name="$PROJECT_DIR$/src/stories" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.PlayForm">
+  <component name="RunManager" selected="Jest.Form">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -87,6 +100,19 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Form" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/Form.test.js" />
+      <test-names>
+        <test-name value="Form" />
+      </test-names>
+      <method v="2" />
     </configuration>
     <configuration name="PlayForm" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
@@ -163,6 +189,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Form" />
         <item itemvalue="Jest.PlayForm" />
         <item itemvalue="Jest.Playform.should be able to show fields" />
         <item itemvalue="Jest.Playform" />
@@ -189,9 +216,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/PlayForm.test.js</url>
+          <url>file://$PROJECT_DIR$/src/Form.test.js</url>
           <line>20</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

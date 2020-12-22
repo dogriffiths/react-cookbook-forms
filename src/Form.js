@@ -1,4 +1,4 @@
-import './PlayForm.css'
+import './Form.css'
 import {useCallback, useEffect, useState} from 'react'
 import FormContext from './FormContext'
 import useDeepEffect from './useDeepEffect'
@@ -40,7 +40,7 @@ export default (props) => {
         (field, v) => setValues((vs) => updateWith(vs, field, v)),
         [setValues]
     )
-    const getValue = useCallback((field) => values[field], [values])
+    const value = useCallback((field) => values[field], [values])
     const setInvalid = useCallback(
         (field, error) => {
             setErrors((i) => updateWith(i, field, error || undefined))
@@ -61,7 +61,7 @@ export default (props) => {
         (field) => setDirtyFields((df) => updateWith(df, field, true)),
         [setDirtyFields]
     )
-    const getDirty = useCallback(
+    const isDirty = useCallback(
         (field) => props.errors || Object.keys(dirtyFields).includes(field),
         [dirtyFields]
     )
@@ -74,16 +74,16 @@ export default (props) => {
 
     const form = {
         setValue,
-        value: getValue,
+        value,
         setDirty,
-        isDirty: getDirty,
+        isDirty,
         setInvalid,
         getError
     }
 
     return (
         <form
-            className={`PlayForm-container ${props.className ? props.className : ''}`}
+            className={`Form-container ${props.className ? props.className : ''}`}
         >
             <FormContext.Provider value={form}>{props.children}</FormContext.Provider>
         </form>

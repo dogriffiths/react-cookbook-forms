@@ -1,6 +1,6 @@
 {
   "name": "react-cookbook-forms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Made with create-react-library",
   "author": "dogriffiths",
   "license": "MIT",
@@ -23,7 +23,8 @@
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "docs": "build-storybook --docs"
   },
   "peerDependencies": {
     "react": "17.0.1"

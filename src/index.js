@@ -1,7 +1,7 @@
-import PlayForm from './PlayForm'
-import PlayField from './PlayField'
-import PlayFieldGroup from './PlayFieldGroup'
-import InputSelectField from './InputSelectField'
-import InputTextField from './InputTextField'
+import PlayForm from './Form'
+import PlayField from './Field'
+import PlayFieldGroup from './FieldGroup'
+import InputSelectField from './Select'
+import InputTextField from './Text'
 
 export {PlayForm, PlayField, PlayFieldGroup, InputSelectField, InputTextField}

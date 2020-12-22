@@ -1,12 +1,12 @@
 import {useContext} from 'react'
 import FieldContext from './FieldContext'
-import './InputTextField.css'
+import './Text.css'
 
 export default ({type}) => {
     const field = useContext(FieldContext)
 
     return (
-        <div className='InputTextField'>
+        <div className='Text'>
             <label htmlFor={field.id}>{field.label}</label>
             <input
                 id={field.id}
@@ -21,7 +21,7 @@ export default ({type}) => {
                 }}
                 type={type}
             />
-            <div className='InputTextField-error'>{field.error || <> &nbsp;</>}</div>
+            <div className='Text-error'>{field.error || <> &nbsp;</>}</div>
         </div>
     )
 }

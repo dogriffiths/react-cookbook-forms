@@ -1,13 +1,13 @@
 import React, {useContext} from 'react'
 import FormContext from './FormContext'
 
-import './PlayFieldGroup.css'
+import './FieldGroup.css'
 
 export default ({children}) => {
     const form = useContext(FormContext)
 
     return (
-        <div className='PlayFieldGroup'>
+        <div className='FieldGroup'>
             <FormContext.Provider value={{...form, style: {flexGrow: 1}}}>
                 {children}
             </FormContext.Provider>
