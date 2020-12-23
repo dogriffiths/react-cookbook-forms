@@ -1,12 +1,12 @@
 import React, {Fragment, useContext} from 'react'
 import FieldContext from './FieldContext'
-import './TextArea.css'
+import styles from './TextArea.module.css'
 
 export default (props) => {
     const field = useContext(FieldContext)
 
     return (
-        <div className='TextArea'>
+        <div className={styles.TextArea}>
             <label htmlFor={field.id}>{field.label}</label>
             <textarea
                 id={field.id}
@@ -17,7 +17,7 @@ export default (props) => {
                 }}
                 {...props}
             />
-            <div className='TextArea-error'>{field.error || <> &nbsp;</>}</div>
+            <div className={styles['TextArea-error']}>{field.error || <> &nbsp;</>}</div>
         </div>
     )
 }

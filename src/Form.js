@@ -1,7 +1,7 @@
-import './Form.css'
 import React, {useCallback, useEffect, useState} from 'react'
 import FormContext from './FormContext'
 import useDeepEffect from './useDeepEffect'
+import styles from './Form.module.css'
 
 function updateWith(oldValue, field, value) {
     const newValue = {...oldValue}
@@ -83,7 +83,7 @@ export default (props) => {
 
     return (
         <form
-            className={`Form-container ${props.className ? props.className : ''}`}
+            className={`styles['Form-container'] ${props.className ? props.className : ''}`}
         >
             <FormContext.Provider value={form}>{props.children}</FormContext.Provider>
         </form>

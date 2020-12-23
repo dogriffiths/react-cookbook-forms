@@ -1,6 +1,6 @@
 import React, {Fragment, useContext} from 'react'
 import FieldContext from './FieldContext'
-import './Text.css'
+import styles from './Text.module.css'
 
 export default (props) => {
     const field = useContext(FieldContext)
@@ -8,7 +8,7 @@ export default (props) => {
     const {type, ...otherProps} = props
 
     return (
-        <div className='Text'>
+        <div className={styles.Text}>
             <label htmlFor={field.id}>{field.label}</label>
             <input
                 id={field.id}
@@ -24,7 +24,7 @@ export default (props) => {
                 type={type}
                 {...otherProps}
             />
-            <div className='Text-error'>{field.error || <> &nbsp;</>}</div>
+            <div className={styles['Text-error']}>{field.error || <> &nbsp;</>}</div>
         </div>
     )
 }
