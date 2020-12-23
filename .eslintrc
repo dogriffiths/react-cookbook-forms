@@ -21,6 +21,7 @@
     }
   },
   "rules": {
+    "comma-dangle": 0,
     "space-before-function-paren": 0,
     "object-curly-spacing": 0,
     "react/prop-types": 0,

@@ -4,6 +4,7 @@ import Field from './Field'
 import Text from './Text'
 import Select from './Select'
 import FieldGroup from './FieldGroup'
+import TextArea from "./TextArea";
 
 export default {
     title: 'Form'
@@ -155,6 +156,9 @@ export const WithMultipleFields = () => {
             </FieldGroup>
             <Field name='numberOfFish'>
                 <Text type='number'/>
+            </Field>
+            <Field name='description'>
+                <TextArea rows={8}/>
             </Field>
             Value: {JSON.stringify(value)}
         </Form>

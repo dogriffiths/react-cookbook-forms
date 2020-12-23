@@ -2,8 +2,10 @@ import {useContext} from 'react'
 import FieldContext from './FieldContext'
 import './Text.css'
 
-export default ({type}) => {
+export default (props) => {
     const field = useContext(FieldContext)
+
+    const {type, ...otherProps} = props
 
     return (
         <div className='Text'>
@@ -20,6 +22,7 @@ export default ({type}) => {
                     }
                 }}
                 type={type}
+                {...otherProps}
             />
             <div className='Text-error'>{field.error || <> &nbsp;</>}</div>
         </div>

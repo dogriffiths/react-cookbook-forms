@@ -1,0 +1,148 @@
+import {useState} from 'react'
+import Form from './Form'
+import Field from './Field'
+import Text from './Text'
+import Select from './Select'
+import FieldGroup from './FieldGroup'
+import {Meta} from '@storybook/addon-docs/blocks';
+
+<Meta title='Tutorial' component={Form}/>
+
+# Getting started
+
+`react-cookbook-forms` is a library for creating simple forms in a simple way.
+
+There are three things you need to know about to get started:
+
+- A `Form`
+- A `Field`
+- A component
+
+Let's begin with an empty form with the `Form` component:
+
+    <Form>
+        Nothing here
+    </Form>
+
+If you create a form with nothing in it, you see--unsurprisingly--nothing:
+
+<Form>
+    Nothing here
+</Form>
+
+So let's add a `Field`. A `Field` is a wrapper for a form component. Let's create a `Field` for a `Text`
+component:
+
+    <Form>
+        <Field name='field1'>
+            <Text/>
+        </Field>
+    </Form>
+
+<Form>
+    <Field name='field1'>
+        <Text/>
+    </Field>
+</Form>
+
+The `Field` defines the field's name (`field1`), which is used to generate the field's label (`Field 1`).
+The `Text` component is used to render the field itself. If we pass a `type` to the `Text` component, we
+can change the way the field looks
+
+    <Form>
+        <Field name='field1'>
+            <Text type='date'/>
+        </Field>
+    </Form>
+
+<Form>
+    <Field name='field1'>
+        <Text type='date'/>
+    </Field>
+</Form>
+
+The `Text` component is now rendered as a date input field.
+
+The library includes very few field components (`Text`, `Select`, `TextArea`), but they are very easy to write, and
+you should have little difficulty in creating field components that work with your own favorite
+component library.
+
+# Capturing data
+
+OK, we've created a simple form. Now we need to capture the data that's been entered into it. We
+can do this with the `Form.onChange` handler. Every time someone enters a value into a field, the
+`onChange` handler is passed an object that represents the current state of the form.
+
+Here we are storing the current form state in `value`, and displaying it at the end of the form:
+
+    const [value, setValue] = useState()
+    return <Form onChange={setValue}>
+        <Field name='yourName'>
+            <Text/>
+        </Field>
+        <Field name='startDate'>
+            <Text type='date'/>
+        </Field>
+        Current value: {JSON.stringify(value)}
+    </Form>
+
+Try entering some values into the fields of the form, and watch as the value changes
+
+export const CaptureData = () => {
+    const [value, setValue] = useState()
+    return <Form onChange={setValue}>
+        <Field name='yourName'>
+            <Text/>
+        </Field>
+        <Field name='startDate'>
+            <Text type='date'/>
+        </Field>
+        Current value: {JSON.stringify(value)}
+    </Form>
+}
+
+<CaptureData/>
+
+# Adding validation
+
+Let's add some validation to the form. We can add validation with the `Field.onValidate` handler.
+
+The `onValidate` handler is given the current value of the field, and in return it either returns
+an error-string, or else the value `null`. If we want to modify the previous form and make sure that
+the `yourName` value is at least 3 characters long we can do it like this:
+
+    const [value, setValue] = useState()
+    return <Form onChange={setValue}>
+        <Field
+            name='yourName'
+            onValidate={v => v.length >= 3 ? null : 'Should be at least 3 characters'}
+        >
+            <Text/>
+        </Field>
+        <Field name='startDate'>
+            <Text type='date'/>
+        </Field>
+        Current value: {JSON.stringify(value)}
+    </Form>
+
+export const ValidateData = () => {
+    const [value, setValue] = useState()
+    return <Form onChange={setValue}>
+        <Field
+            name='yourName'
+            onValidate={v => v.length >= 3 ? null : 'Should be at least 3 characters'}
+        >
+            <Text/>
+        </Field>
+        <Field name='startDate'>
+            <Text type='date'/>
+        </Field>
+        Current value: {JSON.stringify(value)}
+    </Form>
+}
+
+<ValidateData/>
+
+Notice that the validation didn't begin until we clicked into the field. The form keeps track
+of which fields we have touched, that is which fields are *dirty*. That prevents you see a whole
+bunch of validation messages when the form first loads.
