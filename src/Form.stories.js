@@ -4,7 +4,7 @@ import Field from './Field'
 import Text from './Text'
 import Select from './Select'
 import FieldGroup from './FieldGroup'
-import TextArea from "./TextArea";
+import TextArea from './TextArea'
 
 export default {
     title: 'Form'
@@ -67,7 +67,7 @@ export const WithValidation = () => {
                 disabled={!valid}
                 onClick={event => {
                     event.preventDefault()
-                    setMessage('Form submitted');
+                    setMessage('Form submitted')
                 }}>
                 Submit
             </button>
@@ -95,7 +95,7 @@ export const WithExternalError = () => {
             </Field>
             <button onClick={event => {
                 event.preventDefault()
-                setError('Something went wrong!');
+                setError('Something went wrong!')
             }}>
                 Create external error
             </button>
