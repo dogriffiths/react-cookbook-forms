@@ -1,6 +1,7 @@
 import Form from './Form'
 import React, {useState} from 'react'
 import Field from './Field'
+import Radio from './Radio'
 import Text from './Text'
 import Select from './Select'
 import FieldGroup from './FieldGroup'
@@ -152,6 +153,26 @@ export const WithMultipleFields = () => {
                         <option value='vanilla'>Vanilla</option>
                         <option value='chocolate'>Chocolate</option>
                     </Select>
+                </Field>
+            </FieldGroup>
+            <FieldGroup label='Drink'>
+                <Field name='drink'>
+                    <Radio value='whiskey'>Whiskey</Radio>
+                </Field>
+                <Field name='drink'>
+                    <Radio value='gin'>Gin</Radio>
+                </Field>
+                <Field name='drink'>
+                    <Radio value='vermouth'>Vermouth</Radio>
+                </Field>
+                <Field name='drink'>
+                    <Radio value='rum' disabled>Rum</Radio>
+                </Field>
+                <Field name='drink'>
+                    <Radio value='beer'>Beer</Radio>
+                </Field>
+                <Field name='drink'>
+                    <Radio value='vodka'>Vodka</Radio>
                 </Field>
             </FieldGroup>
             <Field name='numberOfFish'>

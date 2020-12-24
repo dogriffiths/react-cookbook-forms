@@ -1,15 +1,20 @@
 import React, {useContext} from 'react'
 import FormContext from './FormContext'
-import styles from './FieldGroup.module.css'
+import './FieldGroup.css'
 
-export default ({children}) => {
+export default ({children, label}) => {
     const form = useContext(FormContext)
 
     return (
-        <div className={styles.FieldGroup}>
-            <FormContext.Provider value={{...form, style: {flexGrow: 1}}}>
-                {children}
-            </FormContext.Provider>
+        <div className='FieldGroup'>
+            {
+                label && <div className='FieldGroup-label'>{label}</div>
+            }
+            <div className='FieldGroup-contents'>
+                <FormContext.Provider value={{...form, style: {flexGrow: 1}}}>
+                    {children}
+                </FormContext.Provider>
+            </div>
         </div>
     )
 }

@@ -1,0 +1,23 @@
+.FieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.FieldGroup-label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+}
+
+.FieldGroup-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    .FieldGroup-contents {
+        display: block;
+    }
+}
