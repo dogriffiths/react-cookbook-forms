@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import FormContext from './FormContext'
+import FormContext from '../Form/FormContext'
 import './FieldGroup.css'
 
 export default ({children, label}) => {

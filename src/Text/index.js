@@ -1,9 +1,9 @@
-import React, {Fragment, useContext} from 'react'
-import FieldContext from './FieldContext'
+import React, {Fragment} from 'react'
+import useField from '../Field/useField'
 import './Text.css'
 
 export default (props) => {
-    const field = useContext(FieldContext)
+    const field = useField()
 
     const {type, ...otherProps} = props
 

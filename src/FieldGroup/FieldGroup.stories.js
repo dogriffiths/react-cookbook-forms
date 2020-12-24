@@ -1,8 +1,8 @@
-import Form from './Form'
 import React from 'react'
-import Field from './Field'
-import Text from './Text'
-import FieldGroup from './FieldGroup'
+import Form from '../Form'
+import Field from '../Field'
+import Text from '../Text'
+import FieldGroup from './index'
 
 export default {
     title: 'FieldGroup',
@@ -30,3 +30,16 @@ export const Basic = (args) => {
     </Form>
 }
 Basic.args = {controlCount: 1}
+
+export const WithLabel = (args) => {
+    return <Form>
+        <FieldGroup label='I am a label'>
+            {
+                Array.from(Array(args.controlCount), (e, i) => <Field name={`field${i}`}>
+                    <Text type={args.type}/>
+                </Field>)
+            }
+        </FieldGroup>
+    </Form>
+}
+WithLabel.args = {controlCount: 1}

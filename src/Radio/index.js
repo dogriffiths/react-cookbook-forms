@@ -1,15 +1,15 @@
-import React, {Fragment, useContext} from 'react'
-import FieldContext from './FieldContext'
-import './Text.css'
+import React, {Fragment} from 'react'
+import useField from '../Field/useField'
+import './Radio.css'
 
 export default (props) => {
-    const field = useContext(FieldContext)
+    const field = useField()
 
     const {value, children, ...otherProps} = props
 
     return (
         <div className='Radio'>
-            <div className='Radio' style={{display: 'flex', flexDirection: 'row'}}>
+            <div className='Radio-control'>
                 <input
                     id={field.value}
                     type='radio'
@@ -21,9 +21,9 @@ export default (props) => {
                     }}
                     {...otherProps}
                 />
-                <label htmlFor={field.value}>{children}</label>
+                <label htmlFor={field.value}>{children || value || field.label}</label>
             </div>
-            <div className='Text-error'>{field.error || <> &nbsp;</>}</div>
+            <div className='Radio-error'>{field.error || <> &nbsp;</>}</div>
         </div>
     )
 }

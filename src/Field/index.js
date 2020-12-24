@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react'
-import FormContext from './FormContext'
-import FieldContext from './FieldContext'
+import FormContext from '../Form/FormContext'
+import FieldContext from '../Field/FieldContext'
 
 const splitCamelCase = (s) =>
     s

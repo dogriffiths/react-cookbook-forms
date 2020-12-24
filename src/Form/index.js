@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react'
 import FormContext from './FormContext'
-import useDeepEffect from './useDeepEffect'
+import useDeepEffect from '../useDeepEffect'
 import './Form.css'
 
 function updateWith(oldValue, field, value) {

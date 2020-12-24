@@ -1,11 +1,11 @@
-import Form from './Form'
+import Form from './index'
 import React, {useState} from 'react'
-import Field from './Field'
-import Radio from './Radio'
-import Text from './Text'
-import Select from './Select'
-import FieldGroup from './FieldGroup'
-import TextArea from './TextArea'
+import Field from '../Field'
+import Radio from '../Radio'
+import Text from '../Text'
+import Select from '../Select'
+import FieldGroup from '../FieldGroup'
+import TextArea from '../TextArea'
 
 export default {
     title: 'Form'

@@ -1,8 +1,8 @@
-import Form from './Form'
-import Field from './Field'
+import Form from './index'
+import Field from '../Field'
 import {render, screen} from '@testing-library/react'
 import user from '@testing-library/user-event'
-import Text from './Text'
+import Text from '../Text'
 import {WithValidation} from './Form.stories'
 
 const sinon = require('sinon')

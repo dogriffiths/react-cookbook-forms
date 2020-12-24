@@ -1,0 +1,27 @@
+.Radio {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.Radio-control {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Radio {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+}
+
+.Radio input {
+    font-size: 16px;
+}
+
+.Radio-error {
+    color: red;
+}
+

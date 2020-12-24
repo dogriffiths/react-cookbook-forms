@@ -1,7 +1,7 @@
-import Form from './Form'
 import React from 'react'
-import Field from './Field'
-import Text from './Text'
+import Form from '../Form'
+import Field from '../Field'
+import Text from './index'
 
 export default {
     title: 'Text',
