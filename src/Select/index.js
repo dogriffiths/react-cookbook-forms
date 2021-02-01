@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 import useField from '../Field/useField'
 import './Select.css'
 
-export default (props) => {
+const Select = (props) => {
     const field = useField()
 
     let style = props.style
@@ -27,3 +27,5 @@ export default (props) => {
         </div>
     </div>
 }
+
+export default Select

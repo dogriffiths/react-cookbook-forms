@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import FormContext from '../Form/FormContext'
 import './FieldGroup.css'
 
-export default ({children, label}) => {
+const FieldGroup = ({children, label}) => {
     const form = useContext(FormContext)
 
     return (
@@ -18,3 +18,5 @@ export default ({children, label}) => {
         </div>
     )
 }
+
+export default FieldGroup

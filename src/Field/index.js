@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import FormContext from '../Form/FormContext'
 import FieldContext from '../Field/FieldContext'
 
@@ -10,29 +10,34 @@ const splitCamelCase = (s) =>
         )
         .replace(/^([a-z])/, (x) => x.toUpperCase())
 
-export default (props) => {
+const Field = (props) => {
     const form = useContext(FormContext)
 
     const value = form.value(props.name)
+
+    const [inFieldError, setInFieldError] = useState()
 
     useEffect(() => {
         form.setValue(props.name, value || '')
     }, [props.name])
 
     useEffect(() => {
-        if (props.onValidate) {
+        if (inFieldError) {
+            form.setInvalid(props.name, inFieldError)
+        } else if (props.onValidate) {
             form.setInvalid(props.name, props.onValidate(value || ''))
         }
-    }, [props.onValidate, value])
+    }, [props.onValidate, value, inFieldError])
 
     const fieldProps = {
         id: props.name,
         label: splitCamelCase(props.name),
         value,
         onBlur: () => form.setDirty(props.name),
-        onNewValue: (newValue) => {
+        onNewValue: (newValue, errorMessage) => {
             form.setDirty(props.name)
             form.setValue(props.name, newValue)
+            setInFieldError(errorMessage)
         },
         error: form.isDirty(props.name) && form.getError(props.name),
         style: form.style || {}
@@ -44,3 +49,5 @@ export default (props) => {
         </FieldContext.Provider>
     )
 }
+
+export default Field

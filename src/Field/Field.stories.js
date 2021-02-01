@@ -1,8 +1,14 @@
-import React, {Fragment} from 'react'
+import React from 'react'
+import Form from '../Form'
+import {Field} from '../index'
 import useField from '../Field/useField'
-import './Text.css'
 
-const Text = (props) => {
+export default {
+    title: 'Field',
+    argTypes: {}
+}
+
+const ValidatingText = (props) => {
     const field = useField()
 
     const {type, ...otherProps} = props
@@ -18,7 +24,7 @@ const Text = (props) => {
                     if (type === 'number') {
                         field.onNewValue(parseFloat(event.target.value))
                     } else {
-                        field.onNewValue(event.target.value)
+                        field.onNewValue(event.target.value, event.target.value.length < 4 ? null : 'Too long!')
                     }
                 }}
                 type={type}
@@ -29,4 +35,10 @@ const Text = (props) => {
     )
 }
 
-export default Text
+export const ValidationWithinFieldComponent = () => {
+    return <Form>
+        <Field name='field1' onValidate={v => v.length < 2 ? 'Too short!' : null}>
+            <ValidatingText type='text'/>
+        </Field>
+    </Form>
+}

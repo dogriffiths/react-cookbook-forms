@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 import useField from '../Field/useField'
 import './TextArea.css'
 
-export default (props) => {
+const TextArea = (props) => {
     const field = useField()
 
     return (
@@ -21,3 +21,5 @@ export default (props) => {
         </div>
     )
 }
+
+export default TextArea

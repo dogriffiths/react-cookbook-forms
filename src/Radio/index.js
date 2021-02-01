@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 import useField from '../Field/useField'
 import './Radio.css'
 
-export default (props) => {
+const Radio = (props) => {
     const field = useField()
 
     const {value, children, ...otherProps} = props
@@ -28,3 +28,5 @@ export default (props) => {
         </div>
     )
 }
+
+export default Radio

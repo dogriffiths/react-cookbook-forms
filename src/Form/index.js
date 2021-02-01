@@ -9,7 +9,7 @@ function updateWith(oldValue, field, value) {
     return newValue
 }
 
-export default (props) => {
+const Form = (props) => {
     const [values, setValues] = useState({})
     const [errors, setErrors] = useState({})
     const [dirtyFields, setDirtyFields] = useState({})
@@ -89,3 +89,5 @@ export default (props) => {
         </form>
     )
 }
+
+export default Form
