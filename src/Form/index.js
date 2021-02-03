@@ -20,7 +20,7 @@ const Form = (props) => {
         }
     }, [props.value])
 
-    useEffect(() => {
+    useDeepEffect(() => {
         if (props.onValid) {
             props.onValid(
                 Object.keys(errors).every((i) => !errors[i]),

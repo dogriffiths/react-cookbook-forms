@@ -63,10 +63,11 @@ describe('Form', () => {
         expect(firstName).toHaveValue('')
         user.type(firstName, 'Bill')
         screen.getByText('Too short!')
-        sinon.assert.callCount(onValid, 7)
+        sinon.assert.callCount(onValid, 2)
         sinon.assert.calledWith(onValid, false, {firstName: 'Too short!'})
         user.type(firstName, 'y')
         sinon.assert.calledWith(onValid, true, {})
+        sinon.assert.callCount(onValid, 3)
     })
     it('should be able to pass in initial values', () => {
         render(
