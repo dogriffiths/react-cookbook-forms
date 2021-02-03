@@ -22,8 +22,8 @@ export const Basic = (args) => {
     return <Form>
         <FieldGroup>
             {
-                Array.from(Array(args.controlCount), (e, i) => <Field name={`field${i}`}>
-                    <Text type={args.type}/>
+                Array.from(Array(args.controlCount), (e, i) => <Field name={`field${i}`} key={`field-${i}`}>
+                    <Text type={args.type} key={`text-${i}`}/>
                 </Field>)
             }
         </FieldGroup>
@@ -35,8 +35,8 @@ export const WithLabel = (args) => {
     return <Form>
         <FieldGroup label='I am a label'>
             {
-                Array.from(Array(args.controlCount), (e, i) => <Field name={`field${i}`}>
-                    <Text type={args.type}/>
+                Array.from(Array(args.controlCount), (e, i) => <Field name={`field${i}`} key={`field-${i}`}>
+                    <Text type={args.type} key={`text-${i}`}/>
                 </Field>)
             }
         </FieldGroup>

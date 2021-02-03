@@ -26,6 +26,8 @@ const Field = (props) => {
             form.setInvalid(props.name, inFieldError)
         } else if (props.onValidate) {
             form.setInvalid(props.name, props.onValidate(value || ''))
+        } else {
+            form.setInvalid(props.name, '')
         }
     }, [props.onValidate, value, inFieldError])
 
