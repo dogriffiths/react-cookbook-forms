@@ -14,10 +14,10 @@ export default {
 export const Basic = () => <Form/>
 
 export const WithFields = () => {
-    const [value, setValue] = useState({})
+    const [value, setValue] = useState({firstName: 'Wilma'})
 
     return (
-        <Form onChange={setValue}>
+        <Form value={value} onChange={setValue}>
             <Field name='firstName'>
                 <Text/>
             </Field>

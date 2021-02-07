@@ -10,7 +10,7 @@ function updateWith(oldValue, field, value) {
 }
 
 const Form = (props) => {
-    const [values, setValues] = useState({})
+    const [values, setValues] = useState(props.value || {})
     const [errors, setErrors] = useState({})
     const [dirtyFields, setDirtyFields] = useState({})
 
