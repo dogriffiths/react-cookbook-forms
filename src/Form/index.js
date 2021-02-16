@@ -1,4 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react'
+import isEqual from 'lodash/isEqual'
 import FormContext from './FormContext'
 import useDeepEffect from '../useDeepEffect'
 import './Form.css'
@@ -68,7 +69,9 @@ const Form = (props) => {
 
     useEffect(() => {
         if (props.onChange) {
-            props.onChange(values)
+            if (!isEqual(props.value, values)) {
+                props.onChange(values)
+            }
         }
     }, [props.onChange, values])
 
