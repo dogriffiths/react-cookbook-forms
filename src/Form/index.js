@@ -67,7 +67,7 @@ const Form = (props) => {
         [dirtyFields]
     )
 
-    useEffect(() => {
+    useDeepEffect(() => {
         if (props.onChange) {
             if (!isEqual(props.value, values)) {
                 props.onChange(values)
