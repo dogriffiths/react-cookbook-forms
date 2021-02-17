@@ -73,7 +73,7 @@ const Form = (props) => {
                 props.onChange(values)
             }
         }
-    }, [props.onChange, values])
+    }, [values])
 
     const form = {
         setValue,
