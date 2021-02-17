@@ -1,6 +1,6 @@
 {
   "name": "react-cookbook-forms",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Made with create-react-library",
   "author": "dogriffiths",
   "license": "MIT",
@@ -64,5 +64,7 @@
   "files": [
     "dist"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "dequal": "^2.0.2"
+  }
 }
