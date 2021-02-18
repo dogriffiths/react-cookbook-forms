@@ -37,7 +37,7 @@ const ValidatingText = (props) => {
 
 export const ValidationWithinFieldComponent = () => {
     return <Form>
-        <Field name='field1' onValidate={v => v.length < 2 ? 'Too short!' : null}>
+        <Field name='field1' onValidate={v => (v && v.length < 2) ? 'Too short!' : null}>
             <ValidatingText type='text'/>
         </Field>
     </Form>

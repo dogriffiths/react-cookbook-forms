@@ -47,7 +47,7 @@ export const WithValidation = () => {
         <Form onValid={(b) => setValid(b)} value={{firstName: 'Sue'}}>
             <Field
                 name='firstName'
-                onValidate={(v) => (v.length < 5 ? 'Too short!' : null)}
+                onValidate={(v) => ((v && v.length < 5) ? 'Too short!' : null)}
             >
                 <Text/>
             </Field>
@@ -87,7 +87,7 @@ export const WithExternalError = () => {
         >
             <Field
                 name='firstName'
-                onValidate={(v) => (v.length < 5 ? 'Too short!' : null)}
+                onValidate={(v) => ((v && v.length < 5) ? 'Too short!' : null)}
             >
                 <Text/>
             </Field>
@@ -115,13 +115,13 @@ export const WithMultipleFields = () => {
                 </Field>
                 <Field
                     name='middleName'
-                    onValidate={(v) => (v.length < 4 ? 'Too short!' : null)}
+                    onValidate={(v) => ((v && v.length < 4) ? 'Too short!' : null)}
                 >
                     <Text/>
                 </Field>
                 <Field
                     name='lastName'
-                    onValidate={(v) => (v.length < 4 ? 'Too short!' : null)}
+                    onValidate={(v) => ((v && v.length < 4) ? 'Too short!' : null)}
                 >
                     <Text/>
                 </Field>

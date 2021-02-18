@@ -18,18 +18,18 @@ const Field = (props) => {
     const [inFieldError, setInFieldError] = useState()
 
     useEffect(() => {
-        form.setValue(props.name, value || '')
+        form.setValue(props.name, value)
     }, [props.name])
 
     useEffect(() => {
         if (inFieldError) {
             form.setInvalid(props.name, inFieldError)
         } else if (props.onValidate) {
-            form.setInvalid(props.name, props.onValidate(value || ''))
+            form.setInvalid(props.name, props.onValidate(value))
         } else {
             form.setInvalid(props.name, '')
         }
-    }, [props.onValidate, value, inFieldError])
+    }, [value, inFieldError])
 
     const fieldProps = {
         id: props.name,

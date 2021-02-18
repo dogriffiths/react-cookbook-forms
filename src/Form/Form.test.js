@@ -41,10 +41,9 @@ describe('Form', () => {
         const lastName = screen.getByLabelText('Last name')
         expect(lastName).toHaveValue('')
         user.type(firstName, 'Bill')
-        sinon.assert.callCount(onChange, 6)
+        sinon.assert.callCount(onChange, 5)
         sinon.assert.calledWith(onChange, {
             firstName: 'Bill',
-            lastName: ''
         })
     })
     it('should validate what you type', () => {
@@ -53,7 +52,7 @@ describe('Form', () => {
             <Form onValid={onValid}>
                 <Field
                     name='firstName'
-                    onValidate={(v) => (v.length < 5 ? 'Too short!' : null)}
+                    onValidate={(v) => ((v && v.length < 5) ? 'Too short!' : null)}
                 >
                     <Text/>
                 </Field>
@@ -96,7 +95,7 @@ describe('Form', () => {
             <Form onValid={onValid} value={{firstName: 'Sue'}}>
                 <Field
                     name='firstName'
-                    onValidate={(v) => (v.length < 5 ? 'Too short!' : null)}
+                    onValidate={(v) => ((v && v.length < 5) ? 'Too short!' : null)}
                 >
                     <Text/>
                 </Field>
@@ -123,7 +122,7 @@ describe('Form', () => {
             >
                 <Field
                     name='firstName'
-                    onValidate={(v) => (v.length < 2 ? 'Too short!' : null)}
+                    onValidate={(v) => ((v && v.length < 2) ? 'Too short!' : null)}
                 >
                     <Text/>
                 </Field>
