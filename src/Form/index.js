@@ -6,7 +6,13 @@ import './Form.css'
 
 function updateWith(oldValue, field, value) {
     const newValue = {...oldValue}
-    newValue[field] = value
+
+    if (value === undefined) {
+        delete newValue[field]
+    } else {
+        newValue[field] = value
+    }
+
     return newValue
 }
 
