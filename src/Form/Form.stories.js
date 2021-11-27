@@ -1,5 +1,6 @@
 import Form from './index'
 import React, {useState} from 'react'
+import Checkbox from '../Checkbox'
 import Field from '../Field'
 import Radio from '../Radio'
 import Text from '../Text'
@@ -175,6 +176,9 @@ export const WithMultipleFields = () => {
                     <Radio value='vodka'>Vodka</Radio>
                 </Field>
             </FieldGroup>
+            <Field name='flanged'>
+                <Checkbox/>
+            </Field>
             <Field name='numberOfFish'>
                 <Text type='number'/>
             </Field>

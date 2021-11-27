@@ -1,0 +1,32 @@
+.Checkbox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.Checkbox-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.Checkbox {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+}
+
+.Checkbox input {
+    font-size: 16px;
+}
+
+.Checkbox label {
+    margin-top: 2px;
+}
+
+.Checkbox-error {
+    color: red;
+}
+

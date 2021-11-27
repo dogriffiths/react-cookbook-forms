@@ -92,7 +92,7 @@ const Form = (props) => {
 
     return (
         <form
-            className={`'Form' ${props.className ? props.className : ''}`}
+            className={`Form ${props.className ? props.className : ''}`}
         >
             <FormContext.Provider value={form}>{props.children}</FormContext.Provider>
         </form>
